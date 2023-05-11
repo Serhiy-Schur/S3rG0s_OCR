@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+  <meta charset="UTF-8">
+  <title>S3rG0's OCR</title>
+  <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.10/tesseract.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <img src="src/background.jpg" class="background" alt="Image not found"/>
+</head>
+<body>
+  <div class="header">
+    <div class="header-text">S3rG0's OCR</div>
+  </div>
+  <div class="progress">
+    <div class="progress-title">Прогрес</div>
+    <div id="progress-animation">
+      <progress></progress>
+    </div>
+  </div>
+  <div class="app">
+    <div class="preview-container">
+    <div id="image-preview"></div>
+    </div>
+    <div class="menu">
+      <div>
+       <label class="input-file">
+        <input type="file" name="file" id="file-input">
+        <span>Виберіть зображення</span>
+      </label>
+      </div><br><br>
+      <div class="lang-select-title">Виберіть мову</div><br>
+      <div class="select select--multiple">
+        <select id="lang-select" multiple>
+          <option value="ukr">Українська</option>
+          <option value="eng">Англійська</option>
+          <option value="pol">Польська</option>
+          <option value="deu">Німецька</option>
+          <option value="fra">Французька</option>
+          <option value="chi_sim">Китайська</option>
+        </select>
+      </div><br><br><br><br>
+      <button class="btn" type="button" id="recognize-btn">Розпізнати текст</button><br><br><br>
+      <button class="btn" onclick="myFunction()">Скопіювати текст</button><br><br><br>
+      <button class="btn" onClick="window.location.reload();">Очистити дані</button><br><br>
+    </div>
+    <div class="result-container">
+    <textarea id="result" readonly></textarea>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
