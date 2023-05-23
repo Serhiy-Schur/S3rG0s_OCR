@@ -52,7 +52,7 @@ recognizeBtn.addEventListener('click', function () {
         });
 });
 
-function myFunction() {
+function copyTextFunction() {
     var copyText = document.getElementById("result");
     copyText.select();
     document.execCommand("copy");
